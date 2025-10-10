@@ -13,18 +13,6 @@
 
     <!-- Header -->
     <header id="main-header" class="flex flex-wrap justify-between items-center px-4 sm:px-6 py-4 sm:py-6 bg-gradient-to-r from-blue-900/60 via-gray-900/80 to-indigo-900/60 shadow-lg sticky top-0 z-50 backdrop-blur-md transition-all duration-300">
-
-        <style>
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: none;
-        }
-        </style>
         <div class="flex items-center gap-4 select-none">
             <span class="text-blue-500 text-3xl animate-spin-slow drop-shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-9 h-9">
@@ -67,11 +55,12 @@
             <p class="text-gray-200 text-lg md:text-xl drop-shadow-md">
                 Saya seorang fullstack developer dengan keahlian <span class="text-blue-400 font-semibold">Laravel 12</span>, <span class="text-cyan-400 font-semibold">Tailwind CSS</span>, <span class="text-purple-400 font-semibold">ReactJS</span>, PHP, dan JavaScript.
             </p>
-            <a href="/assets/CV HAMADA.pdf" target="_blank" class="inline-block mt-4 px-8 py-4 bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 text-white font-bold rounded-lg btn-glow shadow-xl uppercase tracking-wider transition-transform hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-blue-400/40 focus:outline-none">
+            <button type="button" onclick="showImgModal('assets/CV_HAMADA.png','CV Hamada')" class="inline-block mt-4 px-8 py-4 bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 text-white font-bold rounded-lg btn-glow shadow-xl uppercase tracking-wider transition-transform hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-blue-400/40 focus:outline-none">
                 <span class="inline-flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
                     Lihat CV Saya
                 </span>
-            </a>
+            </button>
         </div>
         <div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center z-10">
             <span class="relative inline-block animate-float">
@@ -161,60 +150,137 @@
     </section>
 
     <!-- My Work -->
-    <section id="portfolio" class="px-6 md:px-20 py-16 fade-in-section">
+    <section id="portfolio" class="px-10 md:px-20 pt-16 pb-8 fade-in-section">
         <h2 class="text-4xl font-extrabold mb-4 text-blue-400 drop-shadow-lg">My Work</h2>
         <p class="text-gray-300 mb-10 text-lg">Berikut adalah beberapa project yang pernah saya kerjakan menggunakan Laravel, React, dan teknologi modern lainnya.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-blue-900/30 hover:scale-105 transition-transform duration-200 glass fade-in-section project-stagger" data-delay="0">
-                <h3 class="font-bold text-2xl mb-2 text-blue-300">Media Review Teknologi</h3>
-                <p class="text-gray-300">Website media review berbasis CMS dengan menggunakan WordPress. Menyediakan fitur manajemen konten, kategori, dan user-friendly untuk publikasi artikel review.</p>
-                <button onclick="toggleDoc('doc1')" class="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded shadow transition">Lihat Dokumentasi</button>
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-blue-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group" data-delay="0">
+                <h3 class="font-bold text-2xl mb-2 text-blue-300 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+                    Media Review Teknologi
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Website media review berbasis <span class="text-blue-400 font-semibold">CMS WordPress</span>. Menyediakan fitur manajemen konten, kategori, dan user-friendly untuk publikasi artikel review.
+                </p>
+                <ul class="mb-4 text-sm text-gray-400 list-disc list-inside space-y-1">
+                    <li>Manajemen artikel & kategori</li>
+                    <li>SEO friendly & responsif</li>
+                    <li>Desain modern & ringan</li>
+                </ul>
+                <button onclick="toggleDoc('doc1')" class="mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded shadow transition focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    <span class="inline-flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                        Lihat Dokumentasi
+                    </span>
+                </button>
                 <div id="doc1" class="hidden mt-4 p-4 bg-gray-900 border border-blue-700 rounded text-left text-sm">
-                    <strong>Dokumentasi Project 1:</strong><br>
-                    <span class="text-gray-300">(foto dokumentasi)</span>
+                    <strong class="block mb-2 text-blue-300">Dokumentasi Project:</strong>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <!-- Ganti dengan gambar dokumentasi project 1 jika ada -->
+                        <span class="text-gray-300">(belum ada dokumentasi)</span>
+                    </div>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-cyan-900/30 hover:scale-105 transition-transform duration-200 glass fade-in-section project-stagger" data-delay="1">
-                <h3 class="font-bold text-2xl mb-2 text-cyan-300">Sistem Informasi Laboratorium DPUPR Kab. Probolinggo</h3>
-                <p class="text-gray-300">Website statis Sistem Informasi Pelayanan Laboratorium Pengujian dan Sewa Alat Berat DPU PR menggunakan teknologi React Native. Menampilkan informasi layanan, jadwal, dan kontak secara interaktif.</p>
-                <button onclick="toggleDoc('doc2')" class="mt-4 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded shadow transition">Lihat Dokumentasi</button>
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-cyan-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group" data-delay="1">
+                <h3 class="font-bold text-2xl mb-2 text-cyan-300 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+                    Sistem Informasi Laboratorium DPUPR Kab. Probolinggo
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Website statis <span class="text-cyan-400 font-semibold">Sistem Informasi Pelayanan Laboratorium Pengujian &amp; Sewa Alat Berat DPU PR</span> menggunakan <span class="text-blue-300 font-semibold">Native Programming</span>. Menampilkan informasi layanan, jadwal, dan kontak secara interaktif dengan desain modern dan responsif.
+                </p>
+                <ul class="mb-4 text-sm text-gray-400 list-disc list-inside space-y-1">
+                    <li>Landing page informatif &amp; mudah dinavigasi</li>
+                    <li>Jadwal layanan laboratorium &amp; alat berat</li>
+                    <li>Kontak &amp; lokasi terintegrasi Google Maps</li>
+                </ul>
+                <button onclick="toggleDoc('doc2')" class="mt-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded shadow transition focus:ring-2 focus:ring-cyan-400 focus:outline-none">
+                    <span class="inline-flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                        Lihat Dokumentasi
+                    </span>
+                </button>
                 <div id="doc2" class="hidden mt-4 p-4 bg-gray-900 border border-cyan-700 rounded text-left text-sm">
-                    <strong>Dokumentasi Project 2:</strong><br>
-                    <span class="text-gray-300">(foto dokumentasi)</span>
+                    <strong class="block mb-2 text-cyan-300">Dokumentasi Project:</strong>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <img src="assets/doc2/screenshot-1759402518390.png" alt="Tampilan utama" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc2/screenshot-1759402619437.png" alt="Jadwal layanan" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc2/screenshot-1759402657157.png" alt="Detail layanan" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc2/screenshot-1759402725800.png" alt="Kontak & lokasi" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc2/screenshot-1759402775073.png" alt="Mobile view" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                    </div>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-purple-900/30 hover:scale-105 transition-transform duration-200 glass fade-in-section project-stagger" data-delay="2">
-                <h3 class="font-bold text-2xl mb-2 text-purple-300">Aplikasi Uji Etik Penelitian Kesehatan</h3>
-                <p class="text-gray-300">Aplikasi berbasis website untuk pelayanan uji etik penelitian kesehatan Universitas Nurul Jadid Paiton dengan teknologi Laravel 12, Tailwind CSS, dan NPM. Mendukung proses pengajuan, review, dan tracking status penelitian.</p>
-                <button onclick="toggleDoc('doc3')" class="mt-4 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded shadow transition">Lihat Dokumentasi</button>
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-purple-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group" data-delay="2">
+                <h3 class="font-bold text-2xl mb-2 text-purple-300 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+                    Aplikasi Uji Etik Penelitian Kesehatan
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Aplikasi berbasis website untuk pelayanan <span class="text-purple-400 font-semibold">uji etik penelitian kesehatan Universitas Nurul Jadid Paiton</span> dengan teknologi <span class="text-blue-300 font-semibold">Laravel 12</span>, <span class="text-cyan-400 font-semibold">Tailwind CSS</span>, dan <span class="text-yellow-300 font-semibold">NPM</span>. Mendukung proses pengajuan, review, dan tracking status penelitian.
+                </p>
+                <ul class="mb-4 text-sm text-gray-400 list-disc list-inside space-y-1">
+                    <li>Pengajuan & tracking status penelitian</li>
+                    <li>Review & notifikasi otomatis</li>
+                    <li>Panel admin & user terpisah</li>
+                    <li>Desain modern, responsif & aman</li>
+                </ul>
+                <button onclick="toggleDoc('doc3')" class="mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded shadow transition focus:ring-2 focus:ring-purple-400 focus:outline-none">
+                    <span class="inline-flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                        Lihat Dokumentasi
+                    </span>
+                </button>
                 <div id="doc3" class="hidden mt-4 p-4 bg-gray-900 border border-purple-700 rounded text-left text-sm">
-                    <strong>Dokumentasi Project 3:</strong><br>
-                    <span class="text-gray-300">(foto dokumentasi)</span>
+                    <strong class="block mb-2 text-cyan-300">Dokumentasi Project:</strong>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <img src="assets/doc3/landing.png" alt="Landing" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/body.png" alt="Body" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/login.png" alt="Login" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/signup.png" alt="Signip" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/dashboard.png" alt="Dashboard" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/profile.png" alt="Profile" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/form.png" alt="Form" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/table.png" alt="Table" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="px-4 md:px-20 py-16 fade-in-section">
+    <section id="contact" class="px-4 md:px-20 py-8 fade-in-section">
         <h2 class="text-4xl font-extrabold mb-4 text-blue-400 drop-shadow-lg">Contact Me</h2>
-        <p class="text-gray-300 mb-10 text-lg">Jika Anda tertarik untuk bekerja sama atau memiliki pertanyaan, jangan ragu untuk menghubungi saya melalui formulir di bawah ini.</p>
-    <form class="w-full max-w-xl mx-auto bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-4 sm:p-8 rounded-2xl shadow-xl border border-blue-900/30 glass">
-            <div class="mb-6">
-                <label for="name" class="block text-gray-200 mb-2 font-semibold">Name</label>
-                <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Name" required>
+        <p class="text-gray-300 mb-10 text-lg">Silakan hubungi saya melalui kontak berikut untuk kerja sama, konsultasi, atau pertanyaan seputar project:</p>
+        <div class="lg:flex lg:gap-6 lg:justify-between">
+            <div class="w-full max-w-xl mx-auto bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-4 sm:p-8 rounded-2xl shadow-xl border border-blue-900/30 glass mb-4 fade-in-section contact-stagger" data-delay="0">
+                <div class="flex flex-col gap-6 text-base text-gray-200">
+                    <div class="flex items-center gap-4">
+                        <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5"/><rect x="7" y="9" width="10" height="6" rx="2"/><path d="M16 3v2"/><path d="M8 3v2"/></svg>
+                        <span>Email: <a href="mailto:hamadafaisal18@gmail.com" class="text-blue-400 underline hover:text-blue-300">hamadafaisal18@gmail.com</a></span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 6.5C2 5.12 3.12 4 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11Z"/><path d="m3 6 9 7 9-7"/></svg>
+                        <span>WhatsApp: <a href="https://wa.me/6282334116929" class="text-green-400 underline hover:text-green-300" target="_blank">+62 823 3411 6929</a></span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 3h5v5"/><path d="M21 3l-9.5 9.5"/></svg>
+                        <span>Telegram: <a href="https://t.me/mad_dun" class="text-cyan-400 underline hover:text-cyan-300" target="_blank">@mad_dun</a></span>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <svg class="w-7 h-7 text-yellow-300 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.828 0l-4.243-4.243a8 8 0 1 1 11.314 0Z"/><circle cx="12" cy="11" r="3"/></svg>
+                        <span>Alamat:<br>Gg. Sugutamu No.59, RT.004/RW.021, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411</span>
+                    </div>
+                </div>
             </div>
-            <div class="mb-6">
-                <label for="email" class="block text-gray-200 mb-2 font-semibold">Email</label>
-                <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Email Address" required>
+            <div class="w-full max-w-xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-blue-900/30 mb-4 fade-in-section contact-stagger" data-delay="1">
+                <a href="https://maps.app.goo.gl/qinJ5eEXjsMNiLYG7" target="_blank" class="block group relative">
+                    <iframe src="https://www.google.com/maps?q=-6.387258695442435,106.84045247734251&hl=id&z=17&output=embed" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <span class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-3 py-1 rounded opacity-80 group-hover:opacity-100 transition">Lihat di Google Maps</span>
+                </a>
             </div>
-            <div class="mb-6">
-                <label for="message" class="block text-gray-200 mb-2 font-semibold">Message</label>
-                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="w-full bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 text-white font-bold py-3 rounded-lg btn-glow shadow-lg uppercase tracking-wider hover:scale-105 transition-transform duration-200">
-                Send Message
-            </button>
-        </form>
+        </div>
+        
     </section>
 
     <!-- Social Media -->
@@ -244,6 +310,12 @@
     <p class="text-gray-400 text-xs sm:text-base">&copy; 2024 Hamada. All rights reserved.</p>
     </footer>
 
+    <!-- Modal for image preview -->
+    <div id="img-modal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 hidden">
+      <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer select-none" onclick="closeImgModal()">&times;</span>
+      <img id="img-modal-src" src="" alt="Preview" class="max-w-[90vw] max-h-[80vh] rounded-lg shadow-2xl border-4 border-white">
+    </div>
+
 </body>
 <script>
     function toggleDoc(id) {
@@ -254,6 +326,32 @@
             el.classList.add('hidden');
         }
     }
+
+    // Image modal preview
+    function showImgModal(src, alt) {
+        const modal = document.getElementById('img-modal');
+        const img = document.getElementById('img-modal-src');
+        img.src = src;
+        img.alt = alt || '';
+        modal.classList.remove('hidden');
+    }
+    function closeImgModal() {
+        document.getElementById('img-modal').classList.add('hidden');
+        document.getElementById('img-modal-src').src = '';
+    }
+    // Add click event to all project documentation images
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.project-stagger img, .project-stagger picture img').forEach(function(img) {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function(e) {
+                showImgModal(img.src, img.alt);
+            });
+        });
+        // Close modal on background click
+        document.getElementById('img-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeImgModal();
+        });
+    });
 
     // Highlight menu aktif saat scroll
     const sections = ['home', 'about', 'portfolio', 'contact'];
@@ -294,12 +392,14 @@
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
-            // Staggered animation for project cards
-            if (entry.target.classList.contains('project-stagger') || entry.target.classList.contains('about-stagger')) {
+            // Staggered animation for project cards, about, and contact
+            if (entry.target.classList.contains('project-stagger') || entry.target.classList.contains('about-stagger') || entry.target.classList.contains('contact-stagger')) {
                 const delay = parseInt(entry.target.getAttribute('data-delay') || '0', 10);
                 setTimeout(() => {
                     entry.target.classList.add('is-visible');
-                }, delay * 180);
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'none';
+                }, delay * 220);
             } else {
                 entry.target.classList.add('is-visible');
             }
