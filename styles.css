@@ -137,6 +137,69 @@ a {
     display: none;
 }
 
+.back-to-top-button {
+    position: fixed;
+    right: max(1.25rem, env(safe-area-inset-right));
+    bottom: max(1.25rem, env(safe-area-inset-bottom));
+    z-index: 70;
+    display: grid;
+    width: 3.25rem;
+    height: 3.25rem;
+    place-items: center;
+    border: 1px solid rgba(191, 219, 254, 0.4);
+    border-radius: 0.95rem;
+    background: rgba(17, 24, 39, 0.58);
+    color: #bfdbfe;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28), inset 0 1px rgba(255, 255, 255, 0.16);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    backdrop-filter: blur(16px) saturate(160%);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0.5rem);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease,
+        background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.back-to-top-button.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    visibility: visible;
+    animation: back-to-top-float 3s ease-in-out infinite;
+}
+
+.back-to-top-button.is-visible:hover {
+    border-color: rgba(191, 219, 254, 0.75);
+    background: rgba(30, 58, 95, 0.68);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.28),
+        inset 0 1px rgba(255, 255, 255, 0.24);
+    animation-play-state: paused;
+    transform: translateY(-2px) scale(1.05);
+}
+
+@keyframes back-to-top-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+.back-to-top-button svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.back-to-top-button:focus-visible {
+    outline: 2px solid #67e8f9;
+    outline-offset: 3px;
+}
+
 .games-menu-wrapper {
     position: relative;
 }
@@ -504,6 +567,15 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    .back-to-top-button {
+        animation: none;
+        transition: none;
+    }
+
     .memory-card,
     .game-secondary-button,
     .game-text-button,

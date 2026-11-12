@@ -88,8 +88,10 @@ function initializePortfolio() {
     initializeActiveNavigation();
     initializeHeaderScrollEffect();
     initializeScrollAnimations();
-    initializeMiniGames();
     initializeMobileNavigation();
+    initializeGamesMenu();
+    initializeBackToTop();
+    initializeMiniGames();
 }
 
 function initializeMiniGames() {
@@ -100,8 +102,27 @@ function initializeMiniGames() {
     initializeTicTacToe();
     initializeWhackAMole();
     initializePong();
-    initializeGamesMenu();
     initializeGamePicker();
+}
+
+function initializeBackToTop() {
+    const button = document.getElementById("back-to-top");
+    if (!button) return;
+
+    function updateVisibility() {
+        const isVisible = window.scrollY > 300;
+        button.classList.toggle("is-visible", isVisible);
+        button.setAttribute("aria-hidden", String(!isVisible));
+        button.tabIndex = isVisible ? 0 : -1;
+    }
+
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+    button.addEventListener("click", () => {
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+    });
+
+    updateVisibility();
 }
 
 function initializeGamesMenu() {
