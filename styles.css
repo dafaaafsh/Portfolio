@@ -1,87 +1,134 @@
 body {
-  font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 a {
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .fade-in-section {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+    transition:
+        opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .fade-in-section.is-visible {
     opacity: 1;
     transform: none;
 }
 
 @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-18px); }
-        }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-        @keyframes text-glow {
-            0%, 100% { text-shadow: 0 0 8px #60a5fa, 0 0 16px #818cf8; }
-            50% { text-shadow: 0 0 24px #38bdf8, 0 0 32px #a78bfa; }
-        }
-        .animate-text-glow { animation: text-glow 2.5s ease-in-out infinite alternate; }
-        @keyframes gradient-x {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        .animate-gradient-x {
-            background-size: 200% 200%;
-            animation: gradient-x 4s ease-in-out infinite;
-        }
-        @keyframes pulse-slow {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
-        }
-        .animate-pulse-slow { animation: pulse-slow 5s ease-in-out infinite; }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes text-glow {
+    0%,
+    100% {
+        text-shadow: 0 0 8px #60a5fa, 0 0 16px #818cf8;
+    }
+
+    50% {
+        text-shadow: 0 0 24px #38bdf8, 0 0 32px #a78bfa;
+    }
+}
+
+.animate-text-glow {
+    animation: text-glow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-x {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 4s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 5s ease-in-out infinite;
+}
 
 @keyframes tech-glow {
-            0%, 100% { box-shadow: 0 0 0px #fff0, 0 0 0px #fff0; }
-            50% { box-shadow: 0 0 16px #38bdf8, 0 0 32px #a78bfa33; }
-        }
-        .animate-tech-glow { animation: tech-glow 3s ease-in-out infinite; }
+    0%,
+    100% {
+        box-shadow: 0 0 0 #fff0, 0 0 0 #fff0;
+    }
 
-/* Custom animation for React icon */
+    50% {
+        box-shadow: 0 0 16px #38bdf8, 0 0 32px #a78bfa33;
+    }
+}
+
+.animate-tech-glow {
+    animation: tech-glow 3s ease-in-out infinite;
+}
+
 .animate-spin-slow {
     animation: spin 6s linear infinite;
 }
+
 @keyframes spin {
-    100% { transform: rotate(360deg);}
+    100% {
+        transform: rotate(360deg);
+    }
 }
-        
-/* Gradient border for hero image */
 
 .gradient-border {
     background: linear-gradient(135deg, #3b82f6, #06b6d4, #a21caf);
-    padding: 4px;            
-    border-radius: 9999px;        
-    display: inline-block;     
+    padding: 4px;
+    border-radius: 9999px;
+    display: inline-block;
 }
-        
-/* Glassmorphism effect */
+
 .glass {
     background: rgba(31, 41, 55, 0.7);
-    backdrop-filter: blur(8px);   
-    border-radius: 1rem;     
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
     box-shadow: 0 8px 32px 0 rgba(31, 41, 55, 0.37);
 }
-        
-/* Button glow effect */
-.btn-glow {            
+
+.btn-glow {
     box-shadow: 0 0 16px 0 #3b82f6, 0 0 32px 0 #06b6d4;
     transition: box-shadow 0.3s;
 }
+
 .btn-glow:hover {
     box-shadow: 0 0 32px 4px #3b82f6, 0 0 48px 8px #06b6d4;
 }
 
-/* Social icon hover scale */
 .icon-hover:hover {
-    transform: scale(1.2) rotate(-6deg);        
+    transform: scale(1.2) rotate(-6deg);
     transition: transform 0.2s;
 }
