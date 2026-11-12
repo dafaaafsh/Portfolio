@@ -89,6 +89,7 @@ function initializePortfolio() {
     initializeHeaderScrollEffect();
     initializeScrollAnimations();
     initializeMiniGames();
+    initializeMobileNavigation();
 }
 
 function initializeMiniGames() {
@@ -135,6 +136,42 @@ function initializeGamesMenu() {
         closeMenu();
         toggle.focus();
     });
+}
+
+function initializeMobileNavigation() {
+    const header = document.getElementById("main-header");
+    const toggle = document.getElementById("mobile-nav-toggle");
+    const navigation = document.getElementById("primary-navigation");
+    if (!header || !toggle || !navigation) return;
+
+    function closeNavigation() {
+        navigation.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Buka menu navigasi");
+    }
+
+    toggle.addEventListener("click", () => {
+        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+        navigation.classList.toggle("is-open", !isExpanded);
+        toggle.setAttribute("aria-expanded", String(!isExpanded));
+        toggle.setAttribute("aria-label", isExpanded ? "Buka menu navigasi" : "Tutup menu navigasi");
+    });
+
+    navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a[href]")) closeNavigation();
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!header.contains(event.target)) closeNavigation();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape" || !navigation.classList.contains("is-open")) return;
+        closeNavigation();
+        toggle.focus();
+    });
+
+    window.matchMedia("(min-width: 641px)").addEventListener("change", closeNavigation);
 }
 
 function selectGame(game) {
