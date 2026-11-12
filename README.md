@@ -12,6 +12,15 @@ portfolio-components/
 │   ├── hero.html
 │   ├── about.html
 │   ├── portfolio.html
+│   ├── games.html
+│   ├── games/
+│   │   ├── memory.html
+│   │   ├── reaction.html
+│   │   ├── number.html
+│   │   ├── snake.html
+│   │   ├── tictactoe.html
+│   │   ├── whack.html
+│   │   └── pong.html
 │   ├── contact.html
 │   ├── social.html
 │   ├── footer.html
@@ -43,5 +52,6 @@ Di VS Code, bisa juga menggunakan extension **Live Server**.
 - Pindahkan folder `assets` lama ke root project ini.
 - Salin `styles.css` lama ke root project ini.
 - `LICENSE` lama dapat tetap digunakan.
-- Konten setiap section berada di file HTML masing-masing.
+- Konten setiap section berada di file HTML masing-masing. Menu game dan pemilihannya ada di `components/games.html`, sedangkan tiap game memiliki file komponen sendiri di `components/games/`.
+- Section games menyediakan tujuh mini game yang dipilih satu per satu.
 - Event, modal gambar, navigasi aktif, dan animasi scroll dikelola di `js/app.js`.

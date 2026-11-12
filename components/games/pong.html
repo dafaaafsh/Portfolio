@@ -1,0 +1,17 @@
+<article class="game-panel" id="pong-game">
+    <div class="mb-5">
+        <span class="game-icon" aria-hidden="true">🏓</span>
+        <h3 class="mt-3 text-2xl font-bold text-white">Pong</h3>
+        <p class="mt-2 text-sm text-gray-300">Kalahkan komputer dengan mencapai 5 poin lebih dulu.</p>
+    </div>
+    <canvas aria-label="Papan Pong. Gerakkan pemukul dengan tombol panah atau W dan S."
+        class="pong-board" height="300" id="pong-canvas" tabindex="0" width="480"></canvas>
+    <div class="pong-controls" aria-label="Kontrol pemukul Pong">
+        <button aria-label="Gerak pemukul ke atas" data-pong-move="-1" type="button">▲</button>
+        <button aria-label="Gerak pemukul ke bawah" data-pong-move="1" type="button">▼</button>
+    </div>
+    <p class="game-status" id="pong-status" aria-live="polite">Tekan Mulai untuk bermain.</p>
+    <p class="snake-score">Skor: <span id="pong-score">0 - 0</span></p>
+    <button class="game-secondary-button" id="pong-start" type="button">Mulai</button>
+    <p class="mt-3 text-xs text-gray-400">Kontrol: ↑/↓, W/S, mouse, atau tombol arah.</p>
+</article>

@@ -1,0 +1,21 @@
+<section class="px-4 md:px-20 py-16 fade-in-section" id="games">
+    <div class="mx-auto max-w-6xl">
+        <p class="mb-2 font-semibold uppercase tracking-[0.2em] text-cyan-400">Play & have fun</p>
+        <h2 class="mb-4 text-4xl font-extrabold text-blue-400 drop-shadow-lg md:text-5xl">Mini Games</h2>
+        <p class="mb-8 max-w-2xl text-lg leading-relaxed text-gray-300">
+            Pilih game favoritmu. Hanya game yang dipilih akan ditampilkan.
+        </p>
+
+        <div aria-label="Pilih mini game" class="game-picker" role="group">
+            <button aria-pressed="true" class="game-picker-button is-active" data-game-select="memory" type="button">🧠 Memory Match</button>
+            <button aria-pressed="false" class="game-picker-button" data-game-select="reaction" type="button">⚡ Tes Reaksi</button>
+            <button aria-pressed="false" class="game-picker-button" data-game-select="number" type="button">🔢 Tebak Angka</button>
+            <button aria-pressed="false" class="game-picker-button" data-game-select="snake" type="button">🐍 Snake Arcade</button>
+            <button aria-pressed="false" class="game-picker-button" data-game-select="tictactoe" type="button">⭕ Tic-Tac-Toe</button>
+            <button aria-pressed="false" class="game-picker-button" data-game-select="whack" type="button">🔨 Whack-a-Mole</button>
+            <button aria-pressed="false" class="game-picker-button" data-game-select="pong" type="button">🏓 Pong</button>
+        </div>
+
+        <div class="game-stage" id="game-stage" aria-live="polite"></div>
+    </div>
+</section>

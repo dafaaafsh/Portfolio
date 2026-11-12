@@ -132,3 +132,386 @@ a {
     transform: scale(1.2) rotate(-6deg);
     transition: transform 0.2s;
 }
+
+.games-menu-wrapper {
+    position: relative;
+}
+
+.games-menu-wrapper > button {
+    cursor: pointer;
+    background: transparent;
+    color: inherit;
+}
+
+.games-menu-wrapper > button:focus-visible,
+.games-dropdown a:focus-visible {
+    outline: 2px solid #67e8f9;
+    outline-offset: 3px;
+}
+
+.games-dropdown {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 50%;
+    z-index: 60;
+    display: grid;
+    min-width: 12rem;
+    gap: 0.25rem;
+    transform: translateX(-50%);
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    border-radius: 0.85rem;
+    background: rgba(17, 24, 39, 0.97);
+    padding: 0.5rem;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+}
+
+.games-dropdown.hidden {
+    display: none;
+}
+
+.games-dropdown a {
+    border-radius: 0.55rem;
+    padding: 0.65rem 0.75rem;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.games-dropdown a:hover {
+    background: rgba(37, 99, 235, 0.25);
+    color: #7dd3fc;
+}
+
+.game-panel {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 1rem;
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.9), rgba(3, 7, 18, 0.95));
+    padding: 1.5rem;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.game-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+}
+
+.game-picker-button {
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    border-radius: 0.7rem;
+    background: rgba(31, 41, 55, 0.75);
+    padding: 0.7rem 1rem;
+    color: #d1d5db;
+    font-weight: 600;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.game-picker-button:hover,
+.game-picker-button.is-active {
+    border-color: rgba(34, 211, 238, 0.7);
+    background: rgba(8, 145, 178, 0.25);
+    color: #a5f3fc;
+}
+
+.game-picker-button:focus-visible {
+    outline: 2px solid #67e8f9;
+    outline-offset: 3px;
+}
+
+.game-panel-slot[hidden] {
+    display: none;
+}
+
+.game-icon {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.9rem;
+    background: rgba(59, 130, 246, 0.15);
+    font-size: 1.6rem;
+}
+
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.memory-card {
+    display: grid;
+    min-height: 3.5rem;
+    place-items: center;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    border-radius: 0.65rem;
+    background: rgba(30, 58, 138, 0.35);
+    color: #bfdbfe;
+    font-size: 1.3rem;
+    font-weight: 700;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.memory-card:hover:not(.is-matched) {
+    transform: translateY(-2px);
+    background: rgba(37, 99, 235, 0.4);
+}
+
+.memory-card.is-revealed,
+.memory-card.is-matched {
+    border-color: rgba(34, 211, 238, 0.65);
+    background: rgba(8, 145, 178, 0.25);
+}
+
+.memory-card.is-matched {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.game-status {
+    min-height: 3rem;
+    margin: 1rem 0 0.5rem;
+    color: #d1d5db;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.game-secondary-button,
+.game-text-button,
+.reaction-button {
+    min-height: 2.75rem;
+    border-radius: 0.65rem;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.game-secondary-button {
+    border: 1px solid rgba(96, 165, 250, 0.45);
+    background: rgba(37, 99, 235, 0.2);
+    padding: 0.65rem 1rem;
+    color: #dbeafe;
+}
+
+.game-secondary-button:hover:not(:disabled) {
+    background: rgba(37, 99, 235, 0.4);
+}
+
+.game-secondary-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.reaction-button {
+    min-height: 10rem;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    background: rgba(30, 58, 138, 0.35);
+    padding: 1rem;
+    color: #dbeafe;
+    font-size: 1.1rem;
+}
+
+.reaction-button.is-waiting {
+    cursor: pointer;
+    border-color: rgba(251, 191, 36, 0.5);
+    background: rgba(180, 83, 9, 0.2);
+}
+
+.reaction-button.is-go {
+    background: rgba(22, 163, 74, 0.75);
+    color: white;
+}
+
+.reaction-button.is-early {
+    background: rgba(220, 38, 38, 0.3);
+}
+
+.number-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.number-form input {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    border-radius: 0.65rem;
+    background: rgba(3, 7, 18, 0.7);
+    padding: 0.65rem 0.8rem;
+    color: white;
+}
+
+.number-form input:focus {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+}
+
+.game-text-button {
+    align-self: flex-start;
+    padding: 0.4rem 0;
+    color: #7dd3fc;
+}
+
+.game-text-button:hover {
+    color: white;
+}
+
+.game-panel button:focus-visible {
+    outline: 2px solid #67e8f9;
+    outline-offset: 3px;
+}
+
+.snake-board {
+    display: block;
+    width: min(100%, 320px);
+    height: auto;
+    aspect-ratio: 1;
+    align-self: center;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    border-radius: 0.65rem;
+}
+
+.snake-board:focus-visible {
+    outline: 2px solid #67e8f9;
+    outline-offset: 3px;
+}
+
+.snake-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 2.75rem);
+    justify-content: center;
+    gap: 0.35rem;
+    margin-top: 1rem;
+}
+
+.snake-controls button {
+    min-height: 2.75rem;
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    border-radius: 0.6rem;
+    background: rgba(37, 99, 235, 0.2);
+    color: #dbeafe;
+    font-weight: 700;
+}
+
+.snake-controls button:hover {
+    background: rgba(37, 99, 235, 0.4);
+}
+
+.snake-score {
+    margin-bottom: 0.75rem;
+    color: #7dd3fc;
+    font-weight: 700;
+}
+
+.tictactoe-board {
+    display: grid;
+    width: min(100%, 18rem);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    align-self: center;
+}
+
+.tictactoe-board button {
+    display: grid;
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    border-radius: 0.75rem;
+    background: rgba(30, 58, 138, 0.3);
+    color: #67e8f9;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.tictactoe-board button:hover:not(:disabled) {
+    background: rgba(37, 99, 235, 0.4);
+}
+
+.tictactoe-board button.is-winning {
+    border-color: #34d399;
+    background: rgba(5, 150, 105, 0.28);
+}
+
+.whack-board {
+    display: grid;
+    width: min(100%, 19rem);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+    align-self: center;
+}
+
+.whack-board button {
+    display: grid;
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(3, 7, 18, 0.95) 35%, rgba(31, 41, 55, 0.95) 38%);
+    color: #9ca3af;
+    font-size: 1.5rem;
+}
+
+.whack-board button.has-mole {
+    border-color: rgba(251, 191, 36, 0.7);
+    background: radial-gradient(circle, rgba(120, 53, 15, 0.65) 35%, rgba(31, 41, 55, 0.95) 38%);
+    font-size: 2.5rem;
+    transform: scale(1.04);
+}
+
+.pong-board {
+    display: block;
+    width: min(100%, 480px);
+    height: auto;
+    aspect-ratio: 8 / 5;
+    align-self: center;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    border-radius: 0.65rem;
+    touch-action: none;
+}
+
+.pong-board:focus-visible {
+    outline: 2px solid #67e8f9;
+    outline-offset: 3px;
+}
+
+.pong-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.pong-controls button {
+    min-width: 3.25rem;
+    min-height: 2.75rem;
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    border-radius: 0.6rem;
+    background: rgba(37, 99, 235, 0.2);
+    color: #dbeafe;
+    font-weight: 700;
+}
+
+.pong-controls button:hover {
+    background: rgba(37, 99, 235, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .memory-card,
+    .game-secondary-button,
+    .game-text-button,
+    .reaction-button {
+        transition: none;
+    }
+
+    .game-picker-button {
+        transition: none;
+    }
+
+    .whack-board button {
+        transform: none;
+    }
+}
