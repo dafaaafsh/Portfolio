@@ -1,149 +1,269 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Portfolio Hamada - Fullstack Developer</title>
+    <title>Portfolio Hamada - Frontend Website Engineer</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="styles.css">
 
 </head>
+
 <body class="bg-gradient-to-br from-gray-900 via-gray-950 to-gray-800 text-white font-sans">
 
     <!-- Header -->
-    <header id="main-header" class="flex flex-wrap justify-between items-center px-4 sm:px-6 py-4 sm:py-6 bg-gradient-to-r from-blue-900/60 via-gray-900/80 to-indigo-900/60 shadow-lg sticky top-0 z-50 backdrop-blur-md transition-all duration-300">
+    <header id="main-header"
+        class="flex flex-wrap justify-between items-center px-4 sm:px-6 py-4 sm:py-6 bg-gradient-to-r from-blue-900/60 via-gray-900/80 to-indigo-900/60 shadow-lg sticky top-0 z-50 backdrop-blur-md transition-all duration-300">
         <div class="flex items-center gap-4 select-none">
             <span class="text-blue-500 text-3xl animate-spin-slow drop-shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-9 h-9">
-                  <rect x="3" y="3" width="18" height="18" rx="4" fill="#2563eb"/>
-                  <path d="M8 8h8v2H8zm0 4h5v2H8z" fill="#fff"/>
+                    <rect x="3" y="3" width="18" height="18" rx="4" fill="#2563eb" />
+                    <path d="M8 8h8v2H8zm0 4h5v2H8z" fill="#fff" />
                 </svg>
             </span>
-            <span class="ml-1 text-3xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent animate-gradient-x">Hamada Portfolio</span>
+            <span
+                class="ml-1 text-3xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent animate-gradient-x">Hamada
+                Portfolio</span>
         </div>
         <nav class="flex gap-2 md:gap-6 text-base font-semibold">
             <a href="#home" class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
                 <span class="group-hover:text-blue-400 transition">Home</span>
-                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded group-hover:w-full transition-all duration-300"></span>
-            <a href="#about" class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
-                <span class="group-hover:text-blue-400 transition">About</span>
-                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#portfolio" class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
-                <span class="group-hover:text-blue-400 transition">Portfolio</span>
-                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#contact" class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
-                <span class="group-hover:text-blue-400 transition">Contact</span>
-                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded group-hover:w-full transition-all duration-300"></span>
-            </a>
-        </div>
+                <span
+                    class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded group-hover:w-full transition-all duration-300"></span>
+                <a href="#about"
+                    class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
+                    <span class="group-hover:text-blue-400 transition">About</span>
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#portfolio"
+                    class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
+                    <span class="group-hover:text-blue-400 transition">Portfolio</span>
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#contact"
+                    class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
+                    <span class="group-hover:text-blue-400 transition">Contact</span>
+                    <span
+                        class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded group-hover:w-full transition-all duration-300"></span>
+                </a>
+                </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-20 min-h-[70vh] fade-in-section overflow-hidden">
+    <section id="home"
+        class="relative flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-20 min-h-[70vh] fade-in-section overflow-hidden">
         <!-- Decorative background shapes -->
-        <span class="absolute -top-20 -left-20 w-72 h-72 bg-gradient-to-br from-blue-500/30 via-cyan-400/20 to-purple-500/30 rounded-full blur-2xl animate-pulse-slow z-0"></span>
-        <span class="absolute bottom-0 right-0 w-60 h-60 bg-gradient-to-tr from-purple-500/20 via-blue-400/10 to-cyan-400/20 rounded-full blur-2xl animate-pulse-slow z-0"></span>
+        <span
+            class="absolute -top-20 -left-20 w-72 h-72 bg-gradient-to-br from-blue-500/30 via-cyan-400/20 to-purple-500/30 rounded-full blur-2xl animate-pulse-slow z-0"></span>
+        <span
+            class="absolute bottom-0 right-0 w-60 h-60 bg-gradient-to-tr from-purple-500/20 via-blue-400/10 to-cyan-400/20 rounded-full blur-2xl animate-pulse-slow z-0"></span>
         <div class="w-full md:w-1/2 space-y-8 z-10">
             <h1 class="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-xl">
                 I’m <span class="text-blue-400 animate-text-glow">Hamada</span>,<br>
-                <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent animate-gradient-x drop-shadow-lg">Fullstack Web Programmer</span>
+                <span
+                    class="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent animate-gradient-x drop-shadow-lg">Frontend
+                    Website Engineer</span>
             </h1>
             <p class="text-gray-200 text-lg md:text-xl drop-shadow-md">
-                Saya seorang fullstack developer dengan keahlian <span class="text-blue-400 font-semibold">Laravel 12</span>, <span class="text-cyan-400 font-semibold">Tailwind CSS</span>, <span class="text-purple-400 font-semibold">ReactJS</span>, PHP, dan JavaScript.
+                Saya seorang Frontend Website Engineer yang membangun antarmuka web dengan <span
+                    class="text-blue-400 font-semibold">.NET dan C#</span>, menggunakan <span
+                    class="text-cyan-400 font-semibold">Havit Blazor</span> serta <span
+                    class="text-purple-400 font-semibold">PostgreSQL</span> sebagai database.
             </p>
-            <button type="button" onclick="showImgModal('assets/CV_HAMADA.png','CV Hamada')" class="inline-block mt-4 px-8 py-4 bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 text-white font-bold rounded-lg btn-glow shadow-xl uppercase tracking-wider transition-transform hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-blue-400/40 focus:outline-none">
+            <button type="button" onclick="showImgModal('assets/CV_HAMADA.png','CV Hamada')"
+                class="inline-block mt-4 px-8 py-4 bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 text-white font-bold rounded-lg btn-glow shadow-xl uppercase tracking-wider transition-transform hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-blue-400/40 focus:outline-none">
                 <span class="inline-flex items-center gap-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7" />
+                        <line x1="16.5" y1="16.5" x2="21" y2="21" />
+                    </svg>
                     Lihat CV Saya
                 </span>
             </button>
         </div>
         <div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center z-10">
             <span class="relative inline-block animate-float">
-                <span class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400 via-cyan-400 to-purple-500 blur-lg opacity-60 animate-spin-slow"></span>
-                <img src="assets/Hamada.png" alt="Foto Hamada" class="relative rounded-full w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 object-cover mx-auto shadow-2xl border-4 border-gray-900 glass max-w-full h-auto z-10">
+                <span
+                    class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400 via-cyan-400 to-purple-500 blur-lg opacity-60 animate-spin-slow"></span>
+                <img src="assets/Hamada.png" alt="Foto Hamada"
+                    class="relative rounded-full w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 object-cover mx-auto shadow-2xl border-4 border-gray-900 glass max-w-full h-auto z-10">
             </span>
         </div>
     </section>
 
     <!-- About Me -->
     <section id="about" homeclass="px-6 md:px-20 py-16 mb-4 fade-in-section">
-    <div class="relative glass p-6 sm:p-10 md:p-16 overflow-hidden">
-        <!-- Animated background shape -->
-        <span class="absolute -top-24 -left-24 w-80 h-80 bg-gradient-to-br from-blue-500/20 via-cyan-400/10 to-purple-500/20 rounded-full blur-2xl animate-pulse-slow z-0"></span>
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-blue-400 drop-shadow-lg fade-in-section about-stagger" data-delay="0">About Me</h2>
-            <p class="text-gray-200 max-w-2xl mb-8 text-lg leading-relaxed fade-in-section about-stagger" data-delay="1">
-                Saya membangun aplikasi web modern dan efisien, mulai dari backend menggunakan <span class="text-blue-400 font-semibold">Laravel &amp; PHP</span> hingga frontend interaktif dengan <span class="text-cyan-400 font-semibold">React</span> dan <span class="text-purple-400 font-semibold">TailwindCSS</span>. Saya berkomitmen pada clean code, performa, dan pengalaman pengguna terbaik.
+        <div class="relative glass p-6 sm:p-10 md:p-16 overflow-hidden">
+            <!-- Animated background shape -->
+            <span
+                class="absolute -top-24 -left-24 w-80 h-80 bg-gradient-to-br from-blue-500/20 via-cyan-400/10 to-purple-500/20 rounded-full blur-2xl animate-pulse-slow z-0"></span>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-blue-400 drop-shadow-lg fade-in-section about-stagger"
+                data-delay="0">About Me</h2>
+            <p class="text-gray-200 max-w-2xl mb-8 text-lg leading-relaxed fade-in-section about-stagger"
+                data-delay="1">
+                Saya fokus membangun antarmuka website yang modern, responsif, dan mudah digunakan dengan <span
+                    class="text-blue-400 font-semibold">.NET dan C#</span>, <span
+                    class="text-cyan-400 font-semibold">Havit Blazor</span>, serta <span
+                    class="text-purple-400 font-semibold">PostgreSQL</span> (dikelola melalui psql). Saya berkomitmen
+                pada clean code, performa, dan pengalaman pengguna terbaik.
             </p>
-            <h3 class="text-2xl font-semibold mb-8 text-white fade-in-section about-stagger" data-delay="2">My Tech Stack</h3>
+            <h3 class="text-2xl font-semibold mb-8 text-white fade-in-section about-stagger" data-delay="2">My Tech
+                Stack</h3>
             <div class="flex flex-wrap gap-10 justify-start items-center ">
-                <!-- Laravel -->
-                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="0">
-                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-blue-400 animate-tech-glow">
-                        <img src="https://th.bing.com/th/id/OIP.s7ZEqkmVrugV-4MdcVxMaAHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Laravel" class="w-12 h-12">
+                <!-- .NET -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="0">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-blue-400 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
+                            alt=".NET" class="w-12 h-12">
+                    </div>
+                    <span class="mt-2 text-sm text-blue-300 font-semibold tracking-wide">.NET</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-blue-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Platform
+                        pengembangan aplikasi</span>
+                </div>
+                <!-- C# -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="1">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-indigo-400 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                            alt="C#" class="w-12 h-12">
+                    </div>
+                    <span class="mt-2 text-sm text-indigo-200 font-semibold tracking-wide">C#</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-indigo-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Bahasa
+                        pemrograman .NET</span>
+                </div>
+                <!-- Havit Blazor -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="2">
+                    <div
+                        class="flex w-20 h-20 items-center justify-center bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-cyan-400 animate-tech-glow">
+                        <span class="text-cyan-700 text-2xl font-extrabold" aria-hidden="true">HB</span>
+                    </div>
+                    <span class="mt-2 text-sm text-cyan-300 font-semibold tracking-wide">Havit Blazor</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-cyan-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Komponen
+                        UI untuk Blazor</span>
+                </div>
+                <!-- PostgreSQL -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="3">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-yellow-300 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL" class="w-12 h-12">
+                    </div>
+                    <span class="mt-2 text-sm text-yellow-200 font-semibold tracking-wide">PostgreSQL (psql)</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-yellow-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Database
+                        relasional</span>
+                </div>
+                <!-- Previous technologies -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="4">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-blue-400 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+                            alt="Laravel" class="w-12 h-12">
                     </div>
                     <span class="mt-2 text-sm text-blue-300 font-semibold tracking-wide">Laravel</span>
-                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-blue-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Framework PHP Modern</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-blue-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Framework
+                        PHP</span>
                 </div>
-                <!-- PHP -->
-                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="1">
-                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-indigo-400 animate-tech-glow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" alt="PHP" class="w-12 h-12">
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="5">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-indigo-400 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" alt="PHP"
+                            class="w-12 h-12">
                     </div>
                     <span class="mt-2 text-sm text-indigo-200 font-semibold tracking-wide">PHP</span>
-                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-indigo-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Bahasa Backend Populer</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-indigo-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Bahasa
+                        pemrograman</span>
                 </div>
-                <!-- React -->
-                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="2">
-                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-cyan-400 animate-tech-glow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-12 h-12 animate-spin-slow">
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="6">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-cyan-400 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React" class="w-12 h-12">
                     </div>
                     <span class="mt-2 text-sm text-cyan-300 font-semibold tracking-wide">React</span>
-                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-cyan-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">UI Library Modern</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-cyan-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">UI
+                        library</span>
                 </div>
-                <!-- Tailwind CSS -->
-                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="3">
-                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-teal-400 animate-tech-glow">
-                        <img src="https://tse1.mm.bing.net/th/id/OIP.Y-Fkawpdbck9IViCaAvuKgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tailwind CSS" class="w-12 h-12">
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="7">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-teal-400 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                            alt="Tailwind CSS" class="w-12 h-12">
                     </div>
                     <span class="mt-2 text-sm text-teal-300 font-semibold tracking-wide">Tailwind CSS</span>
-                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-teal-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">CSS Utility Framework</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-teal-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">CSS
+                        utility framework</span>
                 </div>
-                <!-- JavaScript -->
-                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="4">
-                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-yellow-300 animate-tech-glow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12">
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="8">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-yellow-300 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript" class="w-12 h-12">
                     </div>
                     <span class="mt-2 text-sm text-yellow-200 font-semibold tracking-wide">JavaScript</span>
-                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-yellow-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Bahasa Frontend & Backend</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-yellow-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Bahasa
+                        pemrograman web</span>
                 </div>
-                <!-- MySQL -->
-                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="5">
-                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-blue-300 animate-tech-glow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-12 h-12">
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="9">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-blue-300 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL" class="w-12 h-12">
                     </div>
                     <span class="mt-2 text-sm text-blue-200 font-semibold tracking-wide">MySQL</span>
-                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-blue-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Database Relasional</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-blue-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Database
+                        relasional</span>
                 </div>
                 <!-- HTML5 -->
-                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="6">
-                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-orange-300 animate-tech-glow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-12 h-12">
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="10">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-orange-300 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML5" class="w-12 h-12">
                     </div>
                     <span class="mt-2 text-sm text-orange-200 font-semibold tracking-wide">HTML5</span>
-                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-orange-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Markup Web Standar</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-orange-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Markup
+                        Web Standar</span>
                 </div>
                 <!-- CSS3 -->
-                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="7">
-                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-blue-100 animate-tech-glow">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-12 h-12">
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger"
+                    data-delay="11">
+                    <div
+                        class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-blue-100 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                            class="w-12 h-12">
                     </div>
                     <span class="mt-2 text-sm text-blue-100 font-semibold tracking-wide">CSS3</span>
-                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-blue-800/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Styling Web Modern</span>
+                    <span
+                        class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-blue-800/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Styling
+                        Web Modern</span>
                 </div>
             </div>
         </div>
@@ -152,24 +272,117 @@
     <!-- My Work -->
     <section id="portfolio" class="px-10 md:px-20 pt-16 pb-8 fade-in-section">
         <h2 class="text-4xl font-extrabold mb-4 text-blue-400 drop-shadow-lg">My Work</h2>
-        <p class="text-gray-300 mb-10 text-lg">Berikut adalah beberapa project yang pernah saya kerjakan menggunakan Laravel, React, dan teknologi modern lainnya.</p>
+        <p class="text-gray-300 mb-10 text-lg">Project terbaru ditampilkan lebih dahulu, diikuti project-project
+            sebelumnya. Fokus teknologi saat ini: .NET, C#, Havit Blazor, dan PostgreSQL.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-blue-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group" data-delay="0">
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-blue-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group"
+                data-delay="0">
                 <h3 class="font-bold text-2xl mb-2 text-blue-300 flex items-center gap-2">
-                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M12 4v16m8-8H4" />
+                    </svg>
+                    Fimoc - Aplikasi Disbursement
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Fimoc adalah aplikasi disbursement yang membantu proses penyaluran dana dikelola dengan lebih
+                    terstruktur. Informasi dan perkembangan proses dapat dipantau dalam satu tempat, sehingga
+                    memudahkan tim terkait mengikuti status dan berkoordinasi.
+                </p>
+                <ul class="mb-4 text-sm text-gray-400 list-disc list-inside space-y-1">
+                    <li>Mendukung pengelolaan proses disbursement</li>
+                    <li>Memudahkan pemantauan status dan progres</li>
+                    <li>Membantu menjaga informasi proses tetap terorganisir</li>
+                </ul>
+                <button onclick="toggleDoc('doc4')"
+                    class="mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded shadow transition focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    <span class="inline-flex items-center gap-2">Lihat Dokumentasi</span>
+                </button>
+                <div id="doc4" class="hidden mt-4 p-4 bg-gray-900 border border-blue-700 rounded text-left text-sm">
+                    <strong class="block mb-2 text-blue-300">Dokumentasi Fimoc:</strong>
+                    <span class="text-gray-300">Dokumentasi belum tersedia.</span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-cyan-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group"
+                data-delay="1">
+                <h3 class="font-bold text-2xl mb-2 text-cyan-300 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M12 4v16m8-8H4" />
+                    </svg>
+                    Manage Service
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Manage Service merupakan aplikasi untuk mendukung preventive maintenance dan audit layanan ISP.
+                    Aktivitas pemeliharaan serta informasi hasil audit dapat dikelola dan dipantau secara lebih
+                    terorganisir, membantu tim menjaga konsistensi kegiatan dan meninjau kondisi layanan.
+                </p>
+                <ul class="mb-4 text-sm text-gray-400 list-disc list-inside space-y-1">
+                    <li>Mendukung kegiatan preventive maintenance</li>
+                    <li>Membantu pencatatan dan peninjauan audit ISP</li>
+                    <li>Memudahkan pemantauan aktivitas layanan</li>
+                </ul>
+                <button onclick="toggleDoc('doc5')"
+                    class="mt-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded shadow transition focus:ring-2 focus:ring-cyan-400 focus:outline-none">
+                    <span class="inline-flex items-center gap-2">Lihat Dokumentasi</span>
+                </button>
+                <div id="doc5" class="hidden mt-4 p-4 bg-gray-900 border border-cyan-700 rounded text-left text-sm">
+                    <strong class="block mb-2 text-cyan-300">Dokumentasi Manage Service:</strong>
+                    <span class="text-gray-300">Dokumentasi belum tersedia.</span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-purple-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group"
+                data-delay="2">
+                <h3 class="font-bold text-2xl mb-2 text-purple-300 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M12 4v16m8-8H4" />
+                    </svg>
+                    Stocktrace
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Stocktrace adalah aplikasi inventory untuk membantu pengelolaan stok gudang secara terstruktur.
+                    Informasi persediaan dapat dipantau dengan lebih mudah, sehingga tim memiliki gambaran yang lebih
+                    jelas mengenai ketersediaan barang dan dapat mendukung aktivitas operasional gudang.
+                </p>
+                <ul class="mb-4 text-sm text-gray-400 list-disc list-inside space-y-1">
+                    <li>Mendukung pengelolaan informasi inventory gudang</li>
+                    <li>Memudahkan pemantauan ketersediaan stok</li>
+                    <li>Membantu operasional gudang lebih terorganisir</li>
+                </ul>
+                <button onclick="toggleDoc('doc6')"
+                    class="mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded shadow transition focus:ring-2 focus:ring-purple-400 focus:outline-none">
+                    <span class="inline-flex items-center gap-2">Lihat Dokumentasi</span>
+                </button>
+                <div id="doc6" class="hidden mt-4 p-4 bg-gray-900 border border-purple-700 rounded text-left text-sm">
+                    <strong class="block mb-2 text-purple-300">Dokumentasi Stocktrace:</strong>
+                    <span class="text-gray-300">Dokumentasi belum tersedia.</span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-blue-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group"
+                data-delay="3">
+                <h3 class="font-bold text-2xl mb-2 text-blue-300 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M12 4v16m8-8H4" />
+                    </svg>
                     Media Review Teknologi
                 </h3>
                 <p class="text-gray-300 mb-4">
-                    Website media review berbasis <span class="text-blue-400 font-semibold">CMS WordPress</span>. Menyediakan fitur manajemen konten, kategori, dan user-friendly untuk publikasi artikel review.
+                    Website media review berbasis <span class="text-blue-400 font-semibold">CMS WordPress</span>.
+                    Menyediakan fitur manajemen konten, kategori, dan user-friendly untuk publikasi artikel review.
                 </p>
                 <ul class="mb-4 text-sm text-gray-400 list-disc list-inside space-y-1">
                     <li>Manajemen artikel & kategori</li>
                     <li>SEO friendly & responsif</li>
                     <li>Desain modern & ringan</li>
                 </ul>
-                <button onclick="toggleDoc('doc1')" class="mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded shadow transition focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <button onclick="toggleDoc('doc1')"
+                    class="mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded shadow transition focus:ring-2 focus:ring-blue-400 focus:outline-none">
                     <span class="inline-flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M15 19l-7-7 7-7" />
+                        </svg>
                         Lihat Dokumentasi
                     </span>
                 </button>
@@ -181,43 +394,67 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-cyan-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group" data-delay="1">
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-cyan-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group"
+                data-delay="4">
                 <h3 class="font-bold text-2xl mb-2 text-cyan-300 flex items-center gap-2">
-                    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+                    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M12 4v16m8-8H4" />
+                    </svg>
                     Sistem Informasi Laboratorium DPUPR Kab. Probolinggo
                 </h3>
                 <p class="text-gray-300 mb-4">
-                    Website statis <span class="text-cyan-400 font-semibold">Sistem Informasi Pelayanan Laboratorium Pengujian &amp; Sewa Alat Berat DPU PR</span> menggunakan <span class="text-blue-300 font-semibold">Native Programming</span>. Menampilkan informasi layanan, jadwal, dan kontak secara interaktif dengan desain modern dan responsif.
+                    Website statis <span class="text-cyan-400 font-semibold">Sistem Informasi Pelayanan Laboratorium
+                        Pengujian &amp; Sewa Alat Berat DPU PR</span> menggunakan <span
+                        class="text-blue-300 font-semibold">Native Programming</span>. Menampilkan informasi layanan,
+                    jadwal, dan kontak secara interaktif dengan desain modern dan responsif.
                 </p>
                 <ul class="mb-4 text-sm text-gray-400 list-disc list-inside space-y-1">
                     <li>Landing page informatif &amp; mudah dinavigasi</li>
                     <li>Jadwal layanan laboratorium &amp; alat berat</li>
                     <li>Kontak &amp; lokasi terintegrasi Google Maps</li>
                 </ul>
-                <button onclick="toggleDoc('doc2')" class="mt-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded shadow transition focus:ring-2 focus:ring-cyan-400 focus:outline-none">
+                <button onclick="toggleDoc('doc2')"
+                    class="mt-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded shadow transition focus:ring-2 focus:ring-cyan-400 focus:outline-none">
                     <span class="inline-flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M15 19l-7-7 7-7" />
+                        </svg>
                         Lihat Dokumentasi
                     </span>
                 </button>
                 <div id="doc2" class="hidden mt-4 p-4 bg-gray-900 border border-cyan-700 rounded text-left text-sm">
                     <strong class="block mb-2 text-cyan-300">Dokumentasi Project:</strong>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <img src="assets/doc2/screenshot-1759402518390.png" alt="Tampilan utama" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc2/screenshot-1759402619437.png" alt="Jadwal layanan" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc2/screenshot-1759402657157.png" alt="Detail layanan" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc2/screenshot-1759402725800.png" alt="Kontak & lokasi" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc2/screenshot-1759402775073.png" alt="Mobile view" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc2/screenshot-1759402518390.png" alt="Tampilan utama"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc2/screenshot-1759402619437.png" alt="Jadwal layanan"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc2/screenshot-1759402657157.png" alt="Detail layanan"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc2/screenshot-1759402725800.png" alt="Kontak & lokasi"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc2/screenshot-1759402775073.png" alt="Mobile view"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
                     </div>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-purple-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group" data-delay="2">
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-purple-900/30 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 ease-out glass fade-in-section project-stagger group"
+                data-delay="5">
                 <h3 class="font-bold text-2xl mb-2 text-purple-300 flex items-center gap-2">
-                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M12 4v16m8-8H4" />
+                    </svg>
                     Aplikasi Uji Etik Penelitian Kesehatan
                 </h3>
                 <p class="text-gray-300 mb-4">
-                    Aplikasi berbasis website untuk pelayanan <span class="text-purple-400 font-semibold">uji etik penelitian kesehatan Universitas Nurul Jadid Paiton</span> dengan teknologi <span class="text-blue-300 font-semibold">Laravel 12</span>, <span class="text-cyan-400 font-semibold">Tailwind CSS</span>, dan <span class="text-yellow-300 font-semibold">NPM</span>. Mendukung proses pengajuan, review, dan tracking status penelitian.
+                    Aplikasi berbasis website untuk pelayanan <span class="text-purple-400 font-semibold">uji etik
+                        penelitian kesehatan Universitas Nurul Jadid Paiton</span> dengan teknologi <span
+                        class="text-blue-300 font-semibold">Laravel 12</span>, <span
+                        class="text-cyan-400 font-semibold">Tailwind CSS</span>, dan <span
+                        class="text-yellow-300 font-semibold">NPM</span>. Mendukung proses pengajuan, review, dan
+                    tracking status penelitian.
                 </p>
                 <ul class="mb-4 text-sm text-gray-400 list-disc list-inside space-y-1">
                     <li>Pengajuan & tracking status penelitian</li>
@@ -225,95 +462,166 @@
                     <li>Panel admin & user terpisah</li>
                     <li>Desain modern, responsif & aman</li>
                 </ul>
-                <button onclick="toggleDoc('doc3')" class="mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded shadow transition focus:ring-2 focus:ring-purple-400 focus:outline-none">
+                <button onclick="toggleDoc('doc3')"
+                    class="mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded shadow transition focus:ring-2 focus:ring-purple-400 focus:outline-none">
                     <span class="inline-flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M15 19l-7-7 7-7" />
+                        </svg>
                         Lihat Dokumentasi
                     </span>
                 </button>
                 <div id="doc3" class="hidden mt-4 p-4 bg-gray-900 border border-purple-700 rounded text-left text-sm">
                     <strong class="block mb-2 text-cyan-300">Dokumentasi Project:</strong>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <img src="assets/doc3/landing.png" alt="Landing" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc3/body.png" alt="Body" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc3/login.png" alt="Login" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc3/signup.png" alt="Signip" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc3/dashboard.png" alt="Dashboard" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc3/profile.png" alt="Profile" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc3/form.png" alt="Form" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
-                        <img src="assets/doc3/table.png" alt="Table" class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/landing.png" alt="Landing"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/body.png" alt="Body"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/login.png" alt="Login"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/signup.png" alt="Signip"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/dashboard.png" alt="Dashboard"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/profile.png" alt="Profile"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/form.png" alt="Form"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
+                        <img src="assets/doc3/table.png" alt="Table"
+                            class="w-full h-auto rounded shadow-md hover:scale-105 transition">
                     </div>
                 </div>
-                </div>
             </div>
+        </div>
         </div>
     </section>
 
     <section id="contact" class="px-4 md:px-20 py-8 fade-in-section">
         <h2 class="text-4xl font-extrabold mb-4 text-blue-400 drop-shadow-lg">Contact Me</h2>
-        <p class="text-gray-300 mb-10 text-lg">Silakan hubungi saya melalui kontak berikut untuk kerja sama, konsultasi, atau pertanyaan seputar project:</p>
+        <p class="text-gray-300 mb-10 text-lg">Silakan hubungi saya melalui kontak berikut untuk kerja sama, konsultasi,
+            atau pertanyaan seputar project:</p>
         <div class="lg:flex lg:gap-6 lg:justify-between">
-            <div class="w-full max-w-xl mx-auto bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-4 sm:p-8 rounded-2xl shadow-xl border border-blue-900/30 glass mb-4 fade-in-section contact-stagger" data-delay="0">
+            <div class="w-full max-w-xl mx-auto bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-4 sm:p-8 rounded-2xl shadow-xl border border-blue-900/30 glass mb-4 fade-in-section contact-stagger"
+                data-delay="0">
                 <div class="flex flex-col gap-6 text-base text-gray-200">
                     <div class="flex items-center gap-4">
-                        <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5"/><rect x="7" y="9" width="10" height="6" rx="2"/><path d="M16 3v2"/><path d="M8 3v2"/></svg>
-                        <span>Email: <a href="mailto:hamadafaisal18@gmail.com" class="text-blue-400 underline hover:text-blue-300">hamadafaisal18@gmail.com</a></span>
+                        <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5" />
+                            <rect x="7" y="9" width="10" height="6" rx="2" />
+                            <path d="M16 3v2" />
+                            <path d="M8 3v2" />
+                        </svg>
+                        <span>Email: <a href="mailto:hamadafaisal18@gmail.com"
+                                class="text-blue-400 underline hover:text-blue-300">hamadafaisal18@gmail.com</a></span>
                     </div>
                     <div class="flex items-center gap-4">
-                        <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 6.5C2 5.12 3.12 4 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11Z"/><path d="m3 6 9 7 9-7"/></svg>
-                        <span>WhatsApp: <a href="https://wa.me/6282334116929" class="text-green-400 underline hover:text-green-300" target="_blank">+62 823 3411 6929</a></span>
+                        <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M2 6.5C2 5.12 3.12 4 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11Z" />
+                            <path d="m3 6 9 7 9-7" />
+                        </svg>
+                        <span>WhatsApp: <a href="https://wa.me/6282334116929"
+                                class="text-green-400 underline hover:text-green-300" target="_blank">+62 823 3411
+                                6929</a></span>
                     </div>
                     <div class="flex items-center gap-4">
-                        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 3h5v5"/><path d="M21 3l-9.5 9.5"/></svg>
-                        <span>Telegram: <a href="https://t.me/mad_dun" class="text-cyan-400 underline hover:text-cyan-300" target="_blank">@mad_dun</a></span>
+                        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                            <path d="M16 3h5v5" />
+                            <path d="M21 3l-9.5 9.5" />
+                        </svg>
+                        <span>Telegram: <a href="https://t.me/mad_dun"
+                                class="text-cyan-400 underline hover:text-cyan-300" target="_blank">@mad_dun</a></span>
                     </div>
                     <div class="flex items-start gap-4">
-                        <svg class="w-7 h-7 text-yellow-300 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.828 0l-4.243-4.243a8 8 0 1 1 11.314 0Z"/><circle cx="12" cy="11" r="3"/></svg>
-                        <span>Alamat:<br>Gg. Sugutamu No.59, RT.004/RW.021, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411</span>
+                        <svg class="w-7 h-7 text-yellow-300 flex-shrink-0" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.828 0l-4.243-4.243a8 8 0 1 1 11.314 0Z" />
+                            <circle cx="12" cy="11" r="3" />
+                        </svg>
+                        <span>Alamat:<br>Gg. Sugutamu No.59, RT.004/RW.021, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa
+                            Barat 16411</span>
                     </div>
                 </div>
             </div>
-            <div class="w-full max-w-xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-blue-900/30 mb-4 fade-in-section contact-stagger" data-delay="1">
+            <div class="w-full max-w-xl mx-auto rounded-2xl overflow-hidden shadow-xl border border-blue-900/30 mb-4 fade-in-section contact-stagger"
+                data-delay="1">
                 <a href="https://maps.app.goo.gl/qinJ5eEXjsMNiLYG7" target="_blank" class="block group relative">
-                    <iframe src="https://www.google.com/maps?q=-6.387258695442435,106.84045247734251&hl=id&z=17&output=embed" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <span class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-3 py-1 rounded opacity-80 group-hover:opacity-100 transition">Lihat di Google Maps</span>
+                    <iframe
+                        src="https://www.google.com/maps?q=-6.387258695442435,106.84045247734251&hl=id&z=17&output=embed"
+                        width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <span
+                        class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-3 py-1 rounded opacity-80 group-hover:opacity-100 transition">Lihat
+                        di Google Maps</span>
                 </a>
             </div>
         </div>
-        
+
     </section>
 
     <!-- Social Media -->
     <section id="Social" class="text-center py-12 border-t border-gray-700 fade-in-section">
         <h3 class="text-2xl font-bold mb-6 text-blue-400">Follow Me</h3>
-    <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-2xl sm:text-3xl">
-            <a href="https://www.facebook.com/profile.php?id=100013204203837&mibextid=LQQJ4d" target="_blank" class="hover:text-blue-400 icon-hover transition-transform duration-200" title="Facebook" aria-label="Facebook">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24H12.82v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0z"/></svg>
+        <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-2xl sm:text-3xl">
+            <a href="https://www.facebook.com/profile.php?id=100013204203837&mibextid=LQQJ4d" target="_blank"
+                class="hover:text-blue-400 icon-hover transition-transform duration-200" title="Facebook"
+                aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                    <path
+                        d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24H12.82v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0z" />
+                </svg>
             </a>
-            <a href="#" class="hover:text-cyan-400 icon-hover transition-transform duration-200" title="Twitter" aria-label="Twitter">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M24 4.557a9.93 9.93 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.92 4.92 0 00-8.384 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.116 2.823 5.247a4.904 4.904 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 01-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 010 21.543a13.94 13.94 0 007.548 2.209c9.058 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0024 4.557z"/></svg>
+            <a href="#" class="hover:text-cyan-400 icon-hover transition-transform duration-200" title="Twitter"
+                aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                    <path
+                        d="M24 4.557a9.93 9.93 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.92 4.92 0 00-8.384 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.116 2.823 5.247a4.904 4.904 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 01-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 010 21.543a13.94 13.94 0 007.548 2.209c9.058 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0024 4.557z" />
+                </svg>
             </a>
-            <a href="https://www.instagram.com/madaaafsh/" class="hover:text-pink-400 icon-hover transition-transform duration-200" title="Instagram" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" class="w-8 h-8"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17" cy="7" r="1.5"/></svg>
+            <a href="https://www.instagram.com/madaaafsh/"
+                class="hover:text-pink-400 icon-hover transition-transform duration-200" title="Instagram"
+                aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="1.5" class="w-8 h-8">
+                    <rect width="20" height="20" x="2" y="2" rx="5" />
+                    <circle cx="12" cy="12" r="5" />
+                    <circle cx="17" cy="7" r="1.5" />
+                </svg>
             </a>
-            <a href="#" class="hover:text-blue-500 icon-hover transition-transform duration-200" title="LinkedIn" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.845-1.563 3.042 0 3.604 2.003 3.604 4.605v5.591z"/></svg>
+            <a href="#" class="hover:text-blue-500 icon-hover transition-transform duration-200" title="LinkedIn"
+                aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                    <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.845-1.563 3.042 0 3.604 2.003 3.604 4.605v5.591z" />
+                </svg>
             </a>
-            <a href="https://github.com/dafaaafsh" class="hover:text-gray-400 icon-hover transition-transform duration-200" title="GitHub" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M12 0C5.371 0 0 5.371 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.011-1.04-.017-2.042-3.338.726-4.042-1.611-4.042-1.611-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.606-2.665-.304-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.404c1.019.005 2.047.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.625-5.475 5.921.43.371.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.216.694.825.576C20.565 21.796 24 17.299 24 12c0-6.629-5.371-12-12-12z"/></svg>
+            <a href="https://github.com/dafaaafsh"
+                class="hover:text-gray-400 icon-hover transition-transform duration-200" title="GitHub"
+                aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                    <path
+                        d="M12 0C5.371 0 0 5.371 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.011-1.04-.017-2.042-3.338.726-4.042-1.611-4.042-1.611-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.606-2.665-.304-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.404c1.019.005 2.047.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.625-5.475 5.921.43.371.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.216.694.825.576C20.565 21.796 24 17.299 24 12c0-6.629-5.371-12-12-12z" />
+                </svg>
             </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="text-center py-6 border-t border-gray-700 mt-4">
-    <p class="text-gray-400 text-xs sm:text-base">&copy; 2024 Hamada. All rights reserved.</p>
+        <p class="text-gray-400 text-xs sm:text-base">&copy; 2024 Hamada. All rights reserved.</p>
     </footer>
 
     <!-- Modal for image preview -->
     <div id="img-modal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 hidden">
-      <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer select-none" onclick="closeImgModal()">&times;</span>
-      <img id="img-modal-src" src="" alt="Preview" class="max-w-[90vw] max-h-[80vh] rounded-lg shadow-2xl border-4 border-white">
+        <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer select-none"
+            onclick="closeImgModal()">&times;</span>
+        <img id="img-modal-src" src="" alt="Preview"
+            class="max-w-[90vw] max-h-[80vh] rounded-lg shadow-2xl border-4 border-white">
     </div>
 
 </body>
@@ -340,15 +648,15 @@
         document.getElementById('img-modal-src').src = '';
     }
     // Add click event to all project documentation images
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.project-stagger img, .project-stagger picture img').forEach(function(img) {
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.project-stagger img, .project-stagger picture img').forEach(function (img) {
             img.style.cursor = 'zoom-in';
-            img.addEventListener('click', function(e) {
+            img.addEventListener('click', function (e) {
                 showImgModal(img.src, img.alt);
             });
         });
         // Close modal on background click
-        document.getElementById('img-modal').addEventListener('click', function(e) {
+        document.getElementById('img-modal').addEventListener('click', function (e) {
             if (e.target === this) closeImgModal();
         });
     });
@@ -389,7 +697,7 @@
         threshold: 0.15,
         rootMargin: '0px 0px -40px 0px'
     };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
             // Staggered animation for project cards, about, and contact
@@ -410,4 +718,5 @@
         appearOnScroll.observe(fader);
     });
 </script>
+
 </html>
